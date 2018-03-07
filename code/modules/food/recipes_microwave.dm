@@ -965,6 +965,7 @@ I said no!
 	items = list(
 		/obj/item/weapon/virusdish
 	)
+	double_possible = 0
 	result = /obj/item/weapon/ruinedvirusdish
 
 /datum/recipe/onionrings
