@@ -36,6 +36,7 @@
 	var/list/fruit    // example: = list("fruit" = 3)
 	var/result        // example: = /obj/item/weapon/reagent_containers/food/snacks/donut/normal
 	var/time = 100    // 1/10 part of second
+	var/double_possible = 1  // check whether recipe allows for result to double
 
 /datum/recipe/proc/check_reagents(var/datum/reagents/avail_reagents)
 	. = 1

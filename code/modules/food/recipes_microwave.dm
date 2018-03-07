@@ -184,6 +184,7 @@ I said no!
 	items = list(
 		/obj/item/weapon/reagent_containers/food/snacks/donkpocket
 	)
+	double_possible = 0
 	result = /obj/item/weapon/reagent_containers/food/snacks/donkpocket //SPECIAL
 	make_food(var/obj/container as obj)
 		var/obj/item/weapon/reagent_containers/food/snacks/donkpocket/being_cooked = locate() in container
@@ -445,6 +446,7 @@ I said no!
 		/obj/item/weapon/reagent_containers/food/snacks/doughslice,
 		/obj/item/weapon/paper,
 	)
+	double_possible = 0			//no two fortune cookies are same
 	result = /obj/item/weapon/reagent_containers/food/snacks/fortunecookie
 	make_food(var/obj/container as obj)
 		var/obj/item/weapon/paper/paper = locate() in container
@@ -991,6 +993,7 @@ I said no!
 	items = list(
 		/obj/item/weapon/reagent_containers/food/snacks/dough
 	)
+	double_possible = 0
 	result = /obj/item/weapon/reagent_containers/food/snacks/bun
 
 /datum/recipe/flatbread
@@ -1003,12 +1006,14 @@ I said no!
 	items = list(
 		/obj/item/weapon/reagent_containers/food/snacks/rawmeatball
 	)
+	double_possible = 0
 	result = /obj/item/weapon/reagent_containers/food/snacks/meatball
 
 /datum/recipe/cutlet
 	items = list(
 		/obj/item/weapon/reagent_containers/food/snacks/rawcutlet
 	)
+	double_possible = 0
 	result = /obj/item/weapon/reagent_containers/food/snacks/cutlet
 
 /datum/recipe/fries
@@ -1104,6 +1109,7 @@ I said no!
 	items = list(
 		/obj/item/weapon/reagent_containers/food/snacks/sliceable/flatdough
 	)
+	double_possible = 0
 	result = /obj/item/weapon/reagent_containers/food/snacks/tortilla
 
 /datum/recipe/meatburrito

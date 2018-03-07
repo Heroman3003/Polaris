@@ -17,6 +17,9 @@
 	var/global/list/acceptable_items // List of the items you can put in
 	var/global/list/acceptable_reagents // List of the reagents you can put in
 	var/global/max_n_of_items = 0
+	var/double_chance = 0
+	var/speed = 1
+	var/clean_break_resist = 0
 
 
 // see code/modules/food/recipes_microwave.dm for recipes
@@ -33,7 +36,10 @@
 	component_parts = list()
 	component_parts += new /obj/item/weapon/stock_parts/console_screen(src)
 	component_parts += new /obj/item/weapon/stock_parts/motor(src)
-	component_parts += new /obj/item/weapon/stock_parts/capacitor(src)
+	component_parts += new /obj/item/weapon/stock_parts/manipulator(src)
+	component_parts += new /obj/item/weapon/stock_parts/manipulator(src)
+	component_parts += new /obj/item/weapon/stock_parts/micro_laser(src)
+	//component_parts += new /obj/item/weapon/stock_parts/capacitor(src)
 
 	if (!available_recipes)
 		available_recipes = new
@@ -55,6 +61,15 @@
 		acceptable_items |= /obj/item/weapon/reagent_containers/food/snacks/grown
 
 	RefreshParts()
+
+/obj/machinery/microwave/RefreshParts()
+	for(var/obj/item/weapon/stock_parts/micro_laser/L in component_parts)
+		clean_break_resist = (L.rating - 1) * 50
+	var/T = 0
+	for(var/obj/item/weapon/stock_parts/manipulator/M in component_parts)
+		T += M.rating
+	double_chance = (T - 2) * 25
+	speed = T / 2
 
 /*******************
 *   Item Adding
@@ -94,6 +109,8 @@
 	else if(default_deconstruction_screwdriver(user, O))
 		return
 	else if(default_deconstruction_crowbar(user, O))
+		return
+	else if(default_part_replacement(user, O))
 		return
 	else if(default_unfasten_wrench(user, O, 10))
 		return
@@ -250,8 +267,9 @@
 	var/datum/recipe/recipe = select_recipe(available_recipes,src)
 	var/obj/cooked
 	if (!recipe)
-		dirty += 1
-		if (prob(max(10,dirty*5)))
+		if(!prob(clean_break_resist))
+			dirty += 1
+		if (prob(max(10,dirty*5)) && !prob(clean_break_resist))
 			if (!wzhzhzh(4))
 				abort()
 				return
@@ -265,7 +283,8 @@
 			if (!wzhzhzh(4))
 				abort()
 				return
-			broke()
+			if(!prob(clean_break_resist))
+				broke()
 			cooked = fail()
 			cooked.loc = src.loc
 			return
@@ -291,10 +310,17 @@
 		stop()
 		if(cooked)
 			cooked.loc = src.loc
+			if(recipe.double_possible && prob(double_chance))
+				var/atom/D = new cooked.type(src.loc)
+				var/ignorevar = list("type","locs","parent_type","verbs","vars","pixel_x","pixel_y")
+				for(var/i in cooked.vars)
+					if(i in ignorevar)
+						continue
+					D.vars[i] = cooked.vars[i]
 		return
 
 /obj/machinery/microwave/proc/wzhzhzh(var/seconds as num) // Whoever named this proc is fucking literally Satan. ~ Z
-	for (var/i=1 to seconds)
+	for (var/i=1 to round(seconds/speed))
 		if (stat & (NOPOWER|BROKEN))
 			return 0
 		use_power(500)
