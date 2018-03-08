@@ -23,7 +23,7 @@
 	RefreshParts()
 
 
-	/*
+
 	spawn( 5 )
 		for (var/dir in cardinal)
 			src.input = locate(/obj/machinery/mineral/input, get_step(src, dir))
@@ -33,12 +33,26 @@
 			if(src.output) break
 		return
 	return
-	*/
+
 
 /obj/machinery/mineral/unloading_machine/RefreshParts()
 	speed = 0
 	for(var/obj/item/weapon/stock_parts/manipulator/M in component_parts)
 		speed += M.rating
+
+/obj/machinery/mineral/unloading_machine/attackby(var/obj/item/O as obj, var/mob/user as mob)
+	if(default_deconstruction_screwdriver(user, O))
+		return
+	else if(default_deconstruction_crowbar(user, O))
+		return
+	else if(default_part_replacement(user, O))
+		return
+	else if(istype(O, /obj/item/device/multitool))
+		return
+	..()
+	src.updateUsrDialog()
+
+
 
 /obj/machinery/mineral/unloading_machine/process()
 	if (src.output && src.input)
@@ -49,12 +63,12 @@
 				BOX.contents -= O
 				O.loc = output.loc
 				i++
-				if (i>=10)
+				if (i>=10*speed)
 					return
 		if (locate(/obj/item, input.loc))
 			var/obj/item/O
 			var/i
-			for (i = 0; i<10; i++)
+			for (i = 0; i<10*speed; i++)
 				O = locate(/obj/item, input.loc)
 				if (O)
 					O.loc = src.output.loc
