@@ -9,10 +9,21 @@
 	anchored = 1.0
 	var/obj/machinery/mineral/input = null
 	var/obj/machinery/mineral/output = null
+	var/speed = 1
 
 
 /obj/machinery/mineral/unloading_machine/New()
 	..()
+
+	component_parts = list()
+	component_parts += new /obj/item/weapon/stock_parts/manipulator(src)
+	component_parts += new /obj/item/weapon/stock_parts/motor(src)
+	component_parts += new /obj/item/weapon/stock_parts/gear(src)
+
+	RefreshParts()
+
+
+	/*
 	spawn( 5 )
 		for (var/dir in cardinal)
 			src.input = locate(/obj/machinery/mineral/input, get_step(src, dir))
@@ -22,6 +33,12 @@
 			if(src.output) break
 		return
 	return
+	*/
+
+/obj/machinery/mineral/unloading_machine/RefreshParts()
+	speed = 0
+	for(var/obj/item/weapon/stock_parts/manipulator/M in component_parts)
+		speed += M.rating
 
 /obj/machinery/mineral/unloading_machine/process()
 	if (src.output && src.input)
