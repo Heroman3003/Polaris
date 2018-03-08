@@ -48,10 +48,18 @@
 	else if(default_part_replacement(user, O))
 		return
 	else if(istype(O, /obj/item/device/multitool))
+		handleinterface(user)
 		return
 	..()
 	src.updateUsrDialog()
 
+/obj/machinery/mineral/unloading_machine/proc/handleinterface(var/mob/user)
+
+
+
+
+
+	user << browse("<HEAD><TITLE>Microwave Controls</TITLE></HEAD><TT>[dat]</TT>", "window=microwave")
 
 
 /obj/machinery/mineral/unloading_machine/process()
