@@ -12,34 +12,42 @@
 	matter = list(DEFAULT_WALL_MATERIAL = 60)
 	pressure_resistance = 2
 	attack_verb = list("stamped")
+	var/stampType = null	//for washing machine coloring
 
 /obj/item/weapon/stamp/captain
 	name = "colony director's rubber stamp"
 	icon_state = "stamp-cap"
+	stampType = "captain"
 
 /obj/item/weapon/stamp/hop
 	name = "head of personnel's rubber stamp"
 	icon_state = "stamp-hop"
+	stampType = "hop"
 
 /obj/item/weapon/stamp/hos
 	name = "head of security's rubber stamp"
 	icon_state = "stamp-hos"
+	stampType = "hos"
 
 /obj/item/weapon/stamp/ward
 	name = "warden's rubber stamp"
 	icon_state = "stamp-ward"
+	stampType = "warden"
 
 /obj/item/weapon/stamp/ce
 	name = "chief engineer's rubber stamp"
 	icon_state = "stamp-ce"
+	stampType = "ce"
 
 /obj/item/weapon/stamp/rd
 	name = "research director's rubber stamp"
 	icon_state = "stamp-rd"
+	stampType = "rd"
 
 /obj/item/weapon/stamp/cmo
 	name = "chief medical officer's rubber stamp"
 	icon_state = "stamp-cmo"
+	stampType = "cmo"
 
 /obj/item/weapon/stamp/denied
 	name = "\improper DENIED rubber stamp"
@@ -48,22 +56,27 @@
 /obj/item/weapon/stamp/clown
 	name = "clown's rubber stamp"
 	icon_state = "stamp-clown"
+	stampType = "clown"
 
 /obj/item/weapon/stamp/internalaffairs
 	name = "internal affairs rubber stamp"
 	icon_state = "stamp-intaff"
+	stampType = "iaa"
 
 /obj/item/weapon/stamp/centcomm
 	name = "\improper CentCom rubber stamp"
 	icon_state = "stamp-cent"
+	stampType = "centcomm"
 
 /obj/item/weapon/stamp/qm
 	name = "quartermaster's rubber stamp"
 	icon_state = "stamp-qm"
+	stampType = "qm"
 
 /obj/item/weapon/stamp/cargo
 	name = "cargo rubber stamp"
 	icon_state = "stamp-cargo"
+	stampType = "cargo"
 
 /obj/item/weapon/stamp/solgov
 	name = "\improper Sol Government rubber stamp"
@@ -92,3 +105,4 @@
 		if(chosen_stamp)
 			name = chosen_stamp.name
 			icon_state = chosen_stamp.icon_state
+			stampType = chosen_stamp.stampType

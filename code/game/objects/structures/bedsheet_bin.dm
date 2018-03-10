@@ -15,6 +15,7 @@ LINEN BINS
 	throw_speed = 1
 	throw_range = 2
 	w_class = ITEMSIZE_SMALL
+	var/double = 0 //for washing machines
 
 /obj/item/weapon/bedsheet/attack_self(mob/user as mob)
 	user.drop_item()
@@ -49,6 +50,8 @@ LINEN BINS
 	icon_state = "sheetpurple"
 
 /obj/item/weapon/bedsheet/rainbow
+	name = "rainbow bedsheet"
+	desc = "A multicolored blanket.  It's actually several different sheets cut up and sewn together."
 	icon_state = "sheetrainbow"
 
 /obj/item/weapon/bedsheet/red
@@ -58,29 +61,60 @@ LINEN BINS
 	icon_state = "sheetyellow"
 
 /obj/item/weapon/bedsheet/mime
+	name = "mime's blanket"
+	desc = "A very soothing striped blanket.  All the noise just seems to fade out when you're under the covers in this."
 	icon_state = "sheetmime"
 
 /obj/item/weapon/bedsheet/clown
+	name = "clown's blanket"
+	desc = "A rainbow blanket with a clown mask woven in.  It smells faintly of bananas."
 	icon_state = "sheetclown"
 	item_state = "sheetrainbow"
 
 /obj/item/weapon/bedsheet/captain
+	name = "colony director's bedsheet"
+	desc = "It has a Nanotrasen symbol on it, and was woven with a revolutionary new kind of thread guaranteed to have 0.01% permeability for most non-chemical substances, popular among most modern colony directors."
 	icon_state = "sheetcaptain"
 
 /obj/item/weapon/bedsheet/rd
+	name = "research director's bedsheet"
+	desc = "It appears to have a beaker emblem, and is made out of fire-resistant material, although it probably won't protect you in the event of fires you're familiar with every day."
 	icon_state = "sheetrd"
 
 /obj/item/weapon/bedsheet/medical
+	name = "medical blanket"
+	desc = "It's a sterilized* blanket commonly used in the Medbay.  *Sterilization is voided if a virologist is present onboard the station."
 	icon_state = "sheetmedical"
 
 /obj/item/weapon/bedsheet/hos
+	name = "head of security's bedsheet"
+	desc = "It is decorated with a shield emblem.  While crime doesn't sleep, you do, but you are still THE LAW!"
 	icon_state = "sheethos"
 
 /obj/item/weapon/bedsheet/hop
+	name = "head of personnel's bedsheet"
+	desc = "It is decorated with a key emblem.  For those rare moments when you can rest and cuddle with Ian without someone screaming for you over the radio."
 	icon_state = "sheethop"
 
 /obj/item/weapon/bedsheet/ce
+	name = "chief engineer's bedsheet"
+	desc = "It is decorated with a wrench emblem.  It's highly reflective and stain resistant, so you don't need to worry about ruining it with oil."
 	icon_state = "sheetce"
+
+/obj/item/weapon/bedsheet/cmo
+	name = "chief medical officer's bedsheet"
+	desc = "It is decorated with a wrench emblem.  It's highly reflective and stain resistant, so you don't need to worry about ruining it with oil."
+	icon_state = "sheetcmo"
+
+/obj/item/weapon/bedsheet/qm
+	name = "quartermaster's bedsheet"
+	desc = "It is decorated with a wrench emblem.  It's highly reflective and stain resistant, so you don't need to worry about ruining it with oil."
+	icon_state = "sheetqm"
+
+/obj/item/weapon/bedsheet/centcom
+	name = "\improper Centcom bedsheet"
+	desc = "It is decorated with a wrench emblem.  It's highly reflective and stain resistant, so you don't need to worry about ruining it with oil."
+	icon_state = "sheetcentcom"
 
 /obj/item/weapon/bedsheet/brown
 	icon_state = "sheetbrown"
@@ -91,70 +125,87 @@ LINEN BINS
 /obj/item/weapon/bedsheet/double
 	icon_state = "doublesheet"
 	item_state = "sheet"
+	double = 1
 
 /obj/item/weapon/bedsheet/bluedouble
 	icon_state = "doublesheetblue"
 	item_state = "sheetblue"
+	double = 1
 
 /obj/item/weapon/bedsheet/greendouble
 	icon_state = "doublesheetgreen"
 	item_state = "sheetgreen"
+	double = 1
 
 /obj/item/weapon/bedsheet/orangedouble
 	icon_state = "doublesheetorange"
 	item_state = "sheetorange"
+	double = 1
 
 /obj/item/weapon/bedsheet/purpledouble
 	icon_state = "doublesheetpurple"
 	item_state = "sheetpurple"
+	double = 1
 
 /obj/item/weapon/bedsheet/rainbowdouble //all the way across the sky.
 	icon_state = "doublesheetrainbow"
 	item_state = "sheetrainbow"
+	double = 1
 
 /obj/item/weapon/bedsheet/reddouble
 	icon_state = "doublesheetred"
 	item_state = "sheetred"
+	double = 1
 
 /obj/item/weapon/bedsheet/yellowdouble
 	icon_state = "doublesheetyellow"
 	item_state = "sheetyellow"
+	double = 1
 
 /obj/item/weapon/bedsheet/mimedouble
 	icon_state = "doublesheetmime"
 	item_state = "sheetmime"
+	double = 1
 
 /obj/item/weapon/bedsheet/clowndouble
 	icon_state = "doublesheetclown"
 	item_state = "sheetrainbow"
+	double = 1
 
 /obj/item/weapon/bedsheet/captaindouble
 	icon_state = "doublesheetcaptain"
 	item_state = "sheetcaptain"
+	double = 1
 
 /obj/item/weapon/bedsheet/rddouble
 	icon_state = "doublesheetrd"
 	item_state = "sheetrd"
+	double = 1
 
 /obj/item/weapon/bedsheet/hosdouble
 	icon_state = "doublesheethos"
 	item_state = "sheethos"
+	double = 1
 
 /obj/item/weapon/bedsheet/hopdouble
 	icon_state = "doublesheethop"
 	item_state = "sheethop"
+	double = 1
 
 /obj/item/weapon/bedsheet/cedouble
 	icon_state = "doublesheetce"
 	item_state = "sheetce"
+	double = 1
 
 /obj/item/weapon/bedsheet/browndouble
 	icon_state = "doublesheetbrown"
 	item_state = "sheetbrown"
+	double = 1
 
 /obj/item/weapon/bedsheet/iandouble
 	icon_state = "doublesheetian"
 	item_state = "sheetian"
+	double = 1
 
 /obj/structure/bedsheetbin
 	name = "linen bin"

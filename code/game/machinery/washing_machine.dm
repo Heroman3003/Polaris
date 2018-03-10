@@ -63,6 +63,57 @@
 		WL.amount = HH.amount
 		qdel(HH)
 
+	if(crayon)
+		var/wash_color
+		if(istype(crayon,/obj/item/toy/crayon))
+			var/obj/item/toy/crayon/CR = crayon
+			wash_color = CR.colourName
+		else if(istype(crayon,/obj/item/weapon/stamp))
+			var/obj/item/weapon/stamp/ST = crayon
+			wash_color = ST.stampType
+
+		if(wash_color)
+			for(var/obj/item/clothing/under/J in contents)
+					/*
+					J.item_state = new_jumpsuit_item_state
+					J.icon_state = new_jumpsuit_icon_state
+					J.item_color = wash_color
+					J.name = new_jumpsuit_name
+					J.desc = new_desc
+					*/
+					handle_item_color_under(J, wash_color)
+			for(var/obj/item/clothing/gloves/G in contents)
+					//world << "DEBUG: YUP! FOUND IT!"
+					G.item_state = new_glove_item_state
+					G.icon_state = new_glove_icon_state
+					G.item_color = wash_color
+					G.name = new_glove_name
+					G.desc = new_desc
+			for(var/obj/item/clothing/shoes/S in contents)
+					//world << "DEBUG: YUP! FOUND IT!"
+					if (istype(S,/obj/item/clothing/shoes/orange))
+						var/obj/item/clothing/shoes/orange/L = S
+						if (L.chained)
+							L.remove_cuffs()
+					S.icon_state = new_shoe_icon_state
+					S.item_color = wash_color
+					S.name = new_shoe_name
+					S.desc = new_desc
+			for(var/obj/item/weapon/bedsheet/B in contents)
+					//world << "DEBUG: YUP! FOUND IT!"
+					B.icon_state = new_sheet_icon_state
+					B.item_color = wash_color
+					B.name = new_sheet_name
+					B.desc = new_desc
+			for(var/obj/item/clothing/head/soft/H in contents)
+					//world << "DEBUG: YUP! FOUND IT!"
+					H.icon_state = new_softcap_icon_state
+					H.item_color = wash_color
+					H.name = new_softcap_name
+					H.desc = new_desc
+		qdel(crayon)
+		crayon = null
+
 	if(locate(/mob,washing))
 		state = 7
 		gibs_ready = 1
@@ -167,3 +218,5 @@
 			washing.Cut()
 
 	update_icon()
+
+/obj/machinery/washing_machine/proc/handle_item_color_under(var/obj/item/clothing/under/jumpsuit, var/newcolor)
