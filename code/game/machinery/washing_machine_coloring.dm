@@ -1,266 +1,181 @@
 /obj/machinery/washing_machine
-	var/possible_colors = list
-		(
-		"under" = list
-			(
-			"red" = list
-				(
+	var/possible_colors = list(
+		"under" = list(
+			"red" = list(
 				"newname" = "red jumpsuit",
 				"newdesc" = "The latest in space fashion.",
-				"newiconstate" = "red"
-				),
-			"orange" = list
-				(
+				"newiconstate" = "red"),
+			"orange" = list(
 				"newname" = "orange jumpsuit",
 				"newdesc" = "It's standardized prisoner-wear.",
-				"newiconstate" = "orange"
-				),
-			"yellow" = list
-				(
+				"newiconstate" = "orange"),
+			"yellow" = list(
 				"newname" = "yellow jumpsuit",
 				"newdesc" = "The latest in space fashion.",
-				"newiconstate" = "yellow"
-				),
-			"green" = list
-				(
+				"newiconstate" = "yellow"),
+			"green" = list(
 				"newname" = "green jumpsuit",
 				"newdesc" = "The latest in space fashion.",
-				"newiconstate" = "green"
-				),
-			"blue" = list
-				(
+				"newiconstate" = "green"),
+			"blue" = list(
 				"newname" = "blue jumpsuit",
 				"newdesc" = "The latest in space fashion.",
-				"newiconstate" = "blue"
-				),
-			"purple" = list
-				(
+				"newiconstate" = "blue"),
+			"purple" = list(
 				"newname" = "purple jumpsuit",
 				"newdesc" = "The latest in space fashion.",
-				"newiconstate" = "purple"
-				),
-			"rainbow" = list
-				(
+				"newiconstate" = "purple"),
+			"rainbow" = list(
 				"newname" = "rainbow jumpsuit",
 				"newdesc" = "A multi-colored jumpsuit.",
-				"newiconstate" = "rainbow"
-				),
-			"mime" = list
-				(
+				"newiconstate" = "rainbow"),
+			"mime" = list(
 				"newname" = "mime's outfit",
 				"newdesc" = "It's not very colourful.",
-				"newiconstate" = "mime"
-				),
-			"clown" = list
-				(
+				"newiconstate" = "mime"),
+			"clown" = list(
 				"newname" = "clown suit",
 				"newdesc" =  "<i><font face='comic sans ms'>Honk!</i></font>",
-				"newiconstate" = "clown"
-				),
-			"cargo" = list
-				(
+				"newiconstate" = "clown"),
+			"cargo" = list(
 				"newname" = "cargo technician's jumpsuit",
 				"newdesc" = "Shooooorts! They're comfy and easy to wear!",
-				"newiconstate" = "cargo"
-				),
-			"qm" = list
-				(
+				"newiconstate" = "cargo"),
+			"qm" = list(
 				"newname" = "quartermaster's jumpsuit",
 				"newdesc" = "It's a jumpsuit worn by the quartermaster. It's specially designed to prevent back injuries caused by pushing paper.",
-				"newiconstate" = "qm"
-				),
-			"warden" = list
-				(
+				"newiconstate" = "qm"),
+			"warden" = list(
 				"newname" = "warden's jumpsuit",
 				"newdesc" = "It's made of a slightly sturdier material than standard jumpsuits, to allow for more robust protection. It has the word \"Warden\" written on the shoulders.",
-				"newiconstate" = "warden"
-				),
-			"iaa" = list
-				(
+				"newiconstate" = "warden"),
+			"iaa" = list(
 				"newname" = "Internal Affairs uniform",
 				"newdesc" = "The plain, professional attire of an Internal Affairs Agent. The collar is <i>immaculately</i> starched.",
-				"newiconstate" = "internalaffairs"
-				),
-			"cmo" = list
-				(
+				"newiconstate" = "internalaffairs"),
+			"cmo" = list(
 				"newname" = "chief medical officer's jumpsuit",
 				"newdesc" = "It's a jumpsuit worn by those with the experience to be \"Chief Medical Officer\". It provides minor biological protection.",
-				"newiconstate" = "cmo"
-				),
-			"rd" = list
-				(
+				"newiconstate" = "cmo"),
+			"rd" = list(
 				"newname" = "research director's jumpsuit",
 				"newdesc" = "It's a jumpsuit worn by those with the know-how to achieve the position of \"Research Director\". Its fabric provides minor protection from biological contaminants.",
-				"newiconstate" = "director"
-				),
-			"ce" = list
-				(
+				"newiconstate" = "director"),
+			"ce" = list(
 				"newname" = "chief engineer's jumpsuit",
 				"newdesc" = "It's a high visibility jumpsuit given to those engineers insane enough to achieve the rank of \"Chief engineer\". It has minor radiation shielding.",
-				"newiconstate" = "chief"
-				),
-			"hos" = list
-				(
+				"newiconstate" = "chief"),
+			"hos" = list(
 				"newname" = "head of security's jumpsuit",
 				"newdesc" = "It's a jumpsuit worn by those few with the dedication to achieve the position of \"Head of Security\". It has additional armor to protect the wearer.",
-				"newiconstate" = "hos"
-				),
-			"hop" = list
-				(
+				"newiconstate" = "hos"),
+			"hop" = list(
 				"newname" = "head of personnel's jumpsuit",
 				"newdesc" = "It's a jumpsuit worn by someone who works in the position of \"Head of Personnel\".",
-				"newiconstate" = "hop"
-				),
-			"captain" = list
-				(
+				"newiconstate" = "hop"),
+			"captain" = list(
 				"newname" = "It's a blue jumpsuit with some gold markings denoting the rank of \"Colony Director\".",
 				"newdesc" = "colony director's jumpsuit",
-				"newiconstate" = "captain"
-				),
-			"centcomm" = list
-				(
+				"newiconstate" = "captain"),
+			"centcomm" = list(
 				"newname" = "\improper Officer's Dress Uniform",
 				"newdesc" = "Gold trim on space-black cloth, this uniform displays the rank of \"Captain.\"",
-				"newiconstate" = "officer"
-				)
+				"newiconstate" = "officer")
 			),
-		"softcap" = list
-			(
-			"red" = list
-				(
+		"softcap" = list(
+			"red" = list(
 				"newname" = "red cap",
 				"newdesc" = "It's a baseball hat in a tasteless red color.",
-				"newiconstate" = "redsoft"
-				),
-			"orange" = list
-				(
+				"newiconstate" = "redsoft"),
+			"orange" = list(
 				"newname" = "orange cap",
 				"newdesc" = "It's a peaked cap in a tasteless orange color.",
-				"newiconstate" = "orangesoft"
-				),
-			"yellow" = list
-				(
+				"newiconstate" = "orangesoft"),
+			"yellow" = list(
 				"newname" = "yellow cap",
 				"newdesc" = "It's a peaked cap in a tasteless yellow color.",
-				"newiconstate" = "yellowsoft"
-				),
-			"green" = list
-				(
+				"newiconstate" = "yellowsoft"),
+			"green" = list(
 				"newname" = "green cap",
 				"newdesc" = "It's a peaked cap in a tasteless green color.",
-				"newiconstate" = "greensoft"
-				),
-			"blue" = list
-				(
+				"newiconstate" = "greensoft"),
+			"blue" = list(
 				"newname" = "blue cap",
 				"newdesc" = "It's a peaked cap in a tasteless blue color.",
-				"newiconstate" = "bluesoft"
-				),
-			"purple" = list
-				(
+				"newiconstate" = "bluesoft"),
+			"purple" = list(
 				"newname" = "purple cap",
 				"newdesc" = "It's a peaked cap in a tasteless purple color.",
-				"newiconstate" = "purplesoft"
-				),
-			"rainbow" = list
-				(
+				"newiconstate" = "purplesoft"),
+			"rainbow" = list(
 				"newname" = "rainbow cap",
 				"newdesc" = "It's a peaked cap in a bright rainbow of colors.",
-				"newiconstate" = "rainbowsoft"
-				),
-			"mime" = list
-				(
+				"newiconstate" = "rainbowsoft"),
+			"mime" = list(
 				"newname" = "white cap",
 				"newdesc" = "It's a peaked cap in a tasteless white color.",
-				"newiconstate" = "mimesoft"
-				),
+				"newiconstate" = "mimesoft"),
 			"clown" = null,
 			"cargo" = null,
-			"qm" = nullen" = list
-				(
+			"qm" = null,
+			"warden" = list(
 				"newname" = "warden's hat",
 				"newdesc" = "It's a special hat issued to the Warden of a securiy force.",
-				"newiconstate" = "policehelm"
-				),
+				"newiconstate" = "policehelm"),
 			"iaa" = null,
 			"cmo" = null,
 			"rd" = null,
 			"ce" = null,
-			"hos" = list
-				(
+			"hos" = list(
 				"newname" = "Head of Security Hat",
 				"newdesc" = "The hat of the Head of Security. For showing the officers who's in charge.",
-				"newiconstate" = "hoscap"
-				),
-			"hop" = list
-				(
+				"newiconstate" = "hoscap"),
+			"hop" = list(
 				"newname" = "crew resource's hat",
 				"newdesc" = "A stylish hat that both protects you from enraged former-crewmembers and gives you a false sense of authority.",
-				"newiconstate" = "hopcap"
-				),
-			"captain" = list
-				(
+				"newiconstate" = "hopcap"),
+			"captain" = list(
 				"newname" = "colony director's hat",
 				"newdesc" = "It's good being the king.",
-				"newiconstate" = "captain"
-				),
-			"centcomm" = list
-				(
+				"newiconstate" = "captain"),
+			"centcomm" = list(
 				"newname" = "\improper CentCom. hat",
 				"newdesc" = "It's good to be emperor.",
-				"newiconstate" = "centcom"
-				)
+				"newiconstate" = "centcom")
 			),
-		"gloves" = list
-			(
-			"red" = list
-				(
+		"gloves" = list(
+			"red" = list(
 				"newname" = "red gloves",
 				"newdesc" = "A pair of gloves, they don't look special in any way.",
-				"newiconstate" = "red"
-				),
-			"orange" = list
-				(
+				"newiconstate" = "red"),
+			"orange" = list(
 				"newname" = "orange gloves",
 				"newdesc" = "A pair of gloves, they don't look special in any way.",
-				"newiconstate" = "orange"
-				),
-			"yellow" = list
-				(
+				"newiconstate" = "orange"),
+			"yellow" = list(
 				"newname" = "insulated gloves",
 				"newdesc" = "These gloves will protect the wearer from electric shock.",
-				"newiconstate" = "yellow"
-				),
-			"green" = list
-				(
+				"newiconstate" = "yellow"),
+			"green" = list(
 				"newname" = "green gloves",
 				"newdesc" = "A pair of gloves, they don't look special in any way.",
-				"newiconstate" = "green"
-				),
-			"blue" = list
-				(
+				"newiconstate" = "green"),
+			"blue" = list(
 				"newname" = "blue gloves",
 				"newdesc" = "A pair of gloves, they don't look special in any way.",
-				"newiconstate" = "blue"
-				),
-			"purple" = list
-				(
+				"newiconstate" = "blue"),
+			"purple" = list(
 				"newname" = "purple gloves",
 				"newdesc" = "A pair of gloves, they don't look special in any way.",
-				"newiconstate" = "purple"
-				),
-			"rainbow" = list
-				(
+				"newiconstate" = "purple"),
+			"rainbow" = list(
 				"newname" = "rainbow gloves",
 				"newdesc" = "A pair of gloves, they don't look special in any way.",
-				"newiconstate" = "rainbow"
-				),
-			"mime" = list
-				(
+				"newiconstate" = "rainbow"),
+			"mime" = list(
 				"newname" = "white gloves",
 				"newdesc" = "These look pretty fancy.",
-				"newiconstate" = "latex"
-				),
+				"newiconstate" = "latex"),
 			"clown" = null,
 			"cargo" = null,
 			"qm" = null,
@@ -271,245 +186,207 @@
 			"ce" = null,
 			"hos" = null,
 			"hop" = null,
-			"captain" = list
-				(
+			"captain" = list(
 				"newname" = "colony director's gloves",
 				"newdesc" = "Regal blue gloves, with a nice gold trim. Swanky.",
-				"newiconstate" = "captain"
-				),
+				"newiconstate" = "captain"),
 			"centcomm" = null
-				)
 			),
-		"shoes" = list
-			(
-			"red" = list
-				(
+		"shoes" = list(
+			"red" = list(
 				"newname" = "red shoes",
 				"newdesc" = "Stylish red shoes.",
-				"newiconstate" = "red"
-				),
-			"orange" = list
-				(
+				"newiconstate" = "red"),
+			"orange" = list(
 				"newname" = "orange shoes",
 				"newdesc" = "Comfortable-looking shoes.",
-				"newiconstate" = "orange"
-				),
-			"yellow" = list
-				(
+				"newiconstate" = "orange"),
+			"yellow" = list(
 				"newname" = "yellow shoes",
 				"newdesc" = "Comfortable-looking shoes.",
-				"newiconstate" = "yellow"
-				),
-			"green" = list
-				(
+				"newiconstate" = "yellow"),
+			"green" = list(
 				"newname" = "green shoes",
 				"newdesc" = "Comfortable-looking shoes.",
-				"newiconstate" = "green"
-				),
-			"blue" = list
-				(
+				"newiconstate" = "green"),
+			"blue" = list(
 				"newname" = "blue shoes",
 				"newdesc" = "Comfortable-looking shoes.",
-				"newiconstate" = "blue"
-				),
-			"purple" = list
-				(
+				"newiconstate" = "blue"),
+			"purple" = list(
 				"newname" = "purple shoes",
 				"newdesc" = "Comfortable-looking shoes.",
-				"newiconstate" = "purple"
-				),
-			"rainbow" = list
-				(
+				"newiconstate" = "purple"),
+			"rainbow" = list(
 				"newname" = "rainbow shoes",
 				"newdesc" = "Very colourful shoes.",
-				"newiconstate" = "rain_bow"
-				),
-			"mime" = list
-				(
+				"newiconstate" = "rain_bow"),
+			"mime" = list(
 				"newname" = "mime shoes",
 				"newdesc" = "Comfortable-looking shoes.",
-				"newiconstate" = "white"
-				),
-			"clown" = list
-				(
+				"newiconstate" = "white"),
+			"clown" = list(
 				"newname" = "clown shoes",
 				"newdesc" = "The prankster's standard-issue clowning shoes. Damn they're huge!",
-				"newiconstate" = "clown"
-				),
-			"cargo" = list
-				(
+				"newiconstate" = "clown"),
+			"cargo" = list(
 				"newname" = "brown shoes",
 				"newdesc" = "A pair of brown shoes.",
-				"newiconstate" = "brown"
-				),
-			"qm" = list
-				(
+				"newiconstate" = "brown"),
+			"qm" = list(
 				"newname" = "brown shoes",
 				"newdesc" = "A pair of brown shoes.",
-				"newiconstate" = "brown"
-				),
-			"warden" = list
-				(
+				"newiconstate" = "brown"),
+			"warden" = list(
 				"newname" = "black shoes",
 				"newdesc" = "A pair of black shoes.",
-				"newiconstate" = "black"
-				),
-			"iaa" = list
-				(
+				"newiconstate" = "black"),
+			"iaa" = list(
 				"newname" = "black shoes",
 				"newdesc" = "A pair of black shoes.",
-				"newiconstate" = "black"
-				),
-			"cmo" = list
-				(
+				"newiconstate" = "black"),
+			"cmo" = list(
 				"newname" = "brown shoes",
 				"newdesc" = "A pair of brown shoes.",
-				"newiconstate" = "brown"
-				),
-			"rd" = list
-				(
+				"newiconstate" = "brown"),
+			"rd" = list(
 				"newname" = "brown shoes",
 				"newdesc" = "A pair of brown shoes.",
-				"newiconstate" = "brown"
-				),
-			"ce" = list
-				(
+				"newiconstate" = "brown"),
+			"ce" = list(
 				"newname" = "brown shoes",
 				"newdesc" = "A pair of brown shoes.",
-				"newiconstate" = "brown"
-				),
-			"hos" = list
-				(
+				"newiconstate" = "brown"),
+			"hos" = list(
 				"newname" = "black shoes",
 				"newdesc" = "A pair of black shoes.",
-				"newiconstate" = "black"
-				),
-			"hop" = list
-				(
+				"newiconstate" = "black"),
+			"hop" = list(
 				"newname" = "brown shoes",
 				"newdesc" = "A pair of brown shoes.",
-				"newiconstate" = "brown"
-				),
-			"captain" = list
-				(
+				"newiconstate" = "brown"),
+			"captain" = list(
 				"newname" = "brown shoes",
 				"newdesc" = "A pair of brown shoes.",
-				"newiconstate" = "brown"
-				),
-			"centcomm" = list
-				(
-				"newname" = "black shoes",
-				"newdesc" = "A pair of black shoes.",
-				"newiconstate" = "black"
-				)
+				"newiconstate" = "brown"),
+			"centcomm" = list(
+				"newname" = "brown shoes",
+				"newdesc" = "A pair of brown shoes.",
+				"newiconstate" = "brown")
 			),
-		"bedsheet" = list
-			(
-			"red" = list
-				(
+		"bedsheet" = list(
+			"red" = list(
 				"newname" = "bedsheet",
 				"newdesc" = "A surprisingly soft linen bedsheet.",
-				"newiconstate" = "sheetred"
-				),
-			"orange" = list
-				(
+				"newiconstate" = "sheetred"),
+			"orange" = list(
 				"newname" = "bedsheet",
 				"newdesc" = "A surprisingly soft linen bedsheet.",
-				"newiconstate" = "sheetorange"
-				),
-			"yellow" = list
-				(
+				"newiconstate" = "sheetorange"),
+			"yellow" = list(
 				"newname" = "bedsheet",
 				"newdesc" = "A surprisingly soft linen bedsheet.",
-				"newiconstate" = "sheetyellow"
-				),
-			"green" = list
-				(
+				"newiconstate" = "sheetyellow"),
+			"green" = list(
 				"newname" = "bedsheet",
 				"newdesc" = "A surprisingly soft linen bedsheet.",
-				"newiconstate" = "sheetgreen"
-				),
-			"blue" = list
-				(
+				"newiconstate" = "sheetgreen"),
+			"blue" = list(
 				"newname" = "bedsheet",
 				"newdesc" = "A surprisingly soft linen bedsheet.",
-				"newiconstate" = "sheetblue"
-				),
-			"purple" = list
-				(
+				"newiconstate" = "sheetblue"),
+			"purple" = list(
 				"newname" = "bedsheet",
 				"newdesc" = "A surprisingly soft linen bedsheet.",
-				"newiconstate" = "sheetpurple"
-				),
-			"rainbow" = list
-				(
+				"newiconstate" = "sheetpurple"),
+			"rainbow" = list(
 				"newname" = "bedsheet",
 				"newdesc" = "A surprisingly soft linen bedsheet.",
-				"newiconstate" = "sheetrainbow"
-				),
-			"mime" = list
-				(
+				"newiconstate" = "sheetrainbow"),
+			"mime" = list(
 				"newname" = "bedsheet",
 				"newdesc" = "A surprisingly soft linen bedsheet.",
-				"newiconstate" = ""
-				),
-			"clown" = list
-				(
+				"newiconstate" = "sheetmime"),
+			"clown" = list(
 				"newname" = "bedsheet",
 				"newdesc" = "A surprisingly soft linen bedsheet.",
-				"newiconstate" = "sheetclown"
-				),
-			"cargo" = list
-				(
+				"newiconstate" = "sheetclown"),
+			"cargo" = list(
 				"newname" = "bedsheet",
 				"newdesc" = "A surprisingly soft linen bedsheet.",
-				"newiconstate" = "sheetbrown"
-				),
-			"qm" = list
-				(
-				"newname" = "bedsheet",
-				"newdesc" = "A surprisingly soft linen bedsheet.",
-				"newiconstate" = "sheetbrown"
-				),
+				"newiconstate" = "sheetbrown"),
+			"qm" = null,
 			"warden" = null,
 			"iaa" = null,
-			"cmo" = list
-				(
+			"cmo" = list(
 				"newname" = "bedsheet",
 				"newdesc" = "A surprisingly soft linen bedsheet.",
-				"newiconstate" = "sheetmedical"
-				),
-			"rd" = list
-				(
+				"newiconstate" = "sheetmedical"),
+			"rd" = list(
 				"newname" = "bedsheet",
 				"newdesc" = "A surprisingly soft linen bedsheet.",
-				"newiconstate" = "sheetrd"
-				),
-			"ce" = list
-				(
+				"newiconstate" = "sheetrd"),
+			"ce" = list(
 				"newname" = "bedsheet",
 				"newdesc" = "A surprisingly soft linen bedsheet.",
-				"newiconstate" = "sheetce"
-				),
-			"hos" = list
-				(
+				"newiconstate" = "sheetce"),
+			"hos" = list(
 				"newname" = "bedsheet",
 				"newdesc" = "A surprisingly soft linen bedsheet.",
-				"newdesc" = "",
-				"newiconstate" = "sheethos"
-				),
-			"hop" = list
-				(
+				"newiconstate" = "sheethos"),
+			"hop" = list(
 				"newname" = "bedsheet",
 				"newdesc" = "A surprisingly soft linen bedsheet.",
-				"newiconstate" = "sheethop"
-				),
-			"captain" = list
-				(
+				"newiconstate" = "sheethop"),
+			"captain" = list(
 				"newname" = "bedsheet",
 				"newdesc" = "A surprisingly soft linen bedsheet.",
-				"newiconstate" = "sheetcaptain"
-				),
+				"newiconstate" = "sheetcaptain"),
 			"centcomm" = null
 			)
 		)
+
+/obj/machinery/washing_machine/proc/handle_coloring()
+	if(crayon)
+		var/wash_color
+		if(istype(crayon,/obj/item/weapon/pen/crayon))
+			var/obj/item/weapon/pen/crayon/C = crayon
+			wash_color = C.colourName
+		else if(istype(crayon,/obj/item/weapon/stamp))
+			var/obj/item/weapon/stamp/T = crayon
+			wash_color = T.stampType
+
+		if(wash_color)
+			for(var/obj/item/clothing/under/J in contents)
+				if(possible_colors["under"][wash_color])
+					J.name = possible_colors["under"][wash_color]["newname"]
+					J.icon_state = possible_colors["under"][wash_color]["newiconstate"]
+					J.desc = addtext(possible_colors["under"][wash_color]["newdesc"]," The colors look a bit dodgy.")
+			for(var/obj/item/clothing/gloves/G in contents)
+				if(possible_colors["gloves"][wash_color])
+					G.name = possible_colors["gloves"][wash_color]["newname"]
+					G.icon_state = possible_colors["gloves"][wash_color]["newiconstate"]
+					G.desc = addtext(possible_colors["gloves"][wash_color]["newdesc"]," The colors look a bit dodgy.")
+			for(var/obj/item/clothing/shoes/S in contents)
+				if(possible_colors["shoes"][wash_color])
+					S.name = possible_colors["shoes"][wash_color]["newname"]
+					S.icon_state = possible_colors["shoes"][wash_color]["newiconstate"]
+					S.desc = addtext(possible_colors["shoes"][wash_color]["newdesc"]," The colors look a bit dodgy.")
+			for(var/obj/item/weapon/bedsheet/B in contents)
+				if(possible_colors["bedsheet"][wash_color])
+					if(!B.double)
+						B.name = possible_colors["bedsheet"][wash_color]["newname"]
+						B.icon_state = possible_colors["bedsheet"][wash_color]["newiconstate"]
+						B.desc = addtext(possible_colors["bedsheet"][wash_color]["newdesc"]," The colors look a bit dodgy.")
+					else
+						B.name = possible_colors["bedsheet"][wash_color]["newname"]
+						B.desc = addtext(possible_colors["bedsheet"][wash_color]["newdesc"]," The colors look a bit dodgy.")
+						B.icon_state = addtext("double",possible_colors["bedsheet"][wash_color]["newiconstate"])
+						B.item_state = possible_colors["bedsheet"][wash_color]["newiconstate"]
+			for(var/obj/item/clothing/head/soft/H in contents)
+				if(possible_colors["softcap"][wash_color])
+					H.name = possible_colors["softcap"][wash_color]["newname"]
+					H.icon_state = possible_colors["softcap"][wash_color]["newiconstate"]
+					H.desc = addtext(possible_colors["softcap"][wash_color]["newdesc"]," The colors look a bit dodgy.")
+		qdel(crayon)
+		crayon = null

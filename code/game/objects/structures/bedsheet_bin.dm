@@ -50,8 +50,6 @@ LINEN BINS
 	icon_state = "sheetpurple"
 
 /obj/item/weapon/bedsheet/rainbow
-	name = "rainbow bedsheet"
-	desc = "A multicolored blanket.  It's actually several different sheets cut up and sewn together."
 	icon_state = "sheetrainbow"
 
 /obj/item/weapon/bedsheet/red
@@ -61,60 +59,32 @@ LINEN BINS
 	icon_state = "sheetyellow"
 
 /obj/item/weapon/bedsheet/mime
-	name = "mime's blanket"
-	desc = "A very soothing striped blanket.  All the noise just seems to fade out when you're under the covers in this."
 	icon_state = "sheetmime"
 
 /obj/item/weapon/bedsheet/clown
-	name = "clown's blanket"
-	desc = "A rainbow blanket with a clown mask woven in.  It smells faintly of bananas."
 	icon_state = "sheetclown"
 	item_state = "sheetrainbow"
 
 /obj/item/weapon/bedsheet/captain
-	name = "colony director's bedsheet"
-	desc = "It has a Nanotrasen symbol on it, and was woven with a revolutionary new kind of thread guaranteed to have 0.01% permeability for most non-chemical substances, popular among most modern colony directors."
 	icon_state = "sheetcaptain"
 
 /obj/item/weapon/bedsheet/rd
-	name = "research director's bedsheet"
-	desc = "It appears to have a beaker emblem, and is made out of fire-resistant material, although it probably won't protect you in the event of fires you're familiar with every day."
 	icon_state = "sheetrd"
 
 /obj/item/weapon/bedsheet/medical
-	name = "medical blanket"
-	desc = "It's a sterilized* blanket commonly used in the Medbay.  *Sterilization is voided if a virologist is present onboard the station."
 	icon_state = "sheetmedical"
 
 /obj/item/weapon/bedsheet/hos
-	name = "head of security's bedsheet"
-	desc = "It is decorated with a shield emblem.  While crime doesn't sleep, you do, but you are still THE LAW!"
 	icon_state = "sheethos"
 
 /obj/item/weapon/bedsheet/hop
-	name = "head of personnel's bedsheet"
-	desc = "It is decorated with a key emblem.  For those rare moments when you can rest and cuddle with Ian without someone screaming for you over the radio."
 	icon_state = "sheethop"
 
 /obj/item/weapon/bedsheet/ce
-	name = "chief engineer's bedsheet"
-	desc = "It is decorated with a wrench emblem.  It's highly reflective and stain resistant, so you don't need to worry about ruining it with oil."
 	icon_state = "sheetce"
 
-/obj/item/weapon/bedsheet/cmo
-	name = "chief medical officer's bedsheet"
-	desc = "It is decorated with a wrench emblem.  It's highly reflective and stain resistant, so you don't need to worry about ruining it with oil."
-	icon_state = "sheetcmo"
-
 /obj/item/weapon/bedsheet/qm
-	name = "quartermaster's bedsheet"
-	desc = "It is decorated with a wrench emblem.  It's highly reflective and stain resistant, so you don't need to worry about ruining it with oil."
 	icon_state = "sheetqm"
-
-/obj/item/weapon/bedsheet/centcom
-	name = "\improper Centcom bedsheet"
-	desc = "It is decorated with a wrench emblem.  It's highly reflective and stain resistant, so you don't need to worry about ruining it with oil."
-	icon_state = "sheetcentcom"
 
 /obj/item/weapon/bedsheet/brown
 	icon_state = "sheetbrown"
