@@ -419,7 +419,19 @@
 	..()
 
 	if(isrobot(user))
-		return //Robots can't interact with storage items.
+		var/obj/item/weapon/gripper/G
+		if(istype(G) && !G.wrapped && (src.type in G.storage_can_interact))
+			for(var/obj/item/C in src.contents)
+				for(var/typepath in G.can_hold)
+					if(istype(C,typepath))
+						var/turf/T = get_turf(user)
+						remove_from_storage(C, T)
+						G.wrapped = C
+						C.loc = G
+						user << "You take [C.name] out of [src.name] with your [G.name]."
+						return
+		else
+			return //Robots ~~can't~~ interact with storage items.
 
 	if(istype(W, /obj/item/device/lightreplacer))
 		var/obj/item/device/lightreplacer/LP = W

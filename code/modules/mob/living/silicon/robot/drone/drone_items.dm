@@ -22,6 +22,8 @@
 		/obj/item/weapon/smes_coil
 		)
 
+	var/list/storage_can_interact = list()
+
 	var/obj/item/wrapped = null // Item currently being held.
 
 	var/force_holder = null //
@@ -84,8 +86,11 @@
 		/obj/item/weapon/disposable_teleporter/slime,
 		/obj/item/slimepotion,
 		/obj/item/slime_extract,
-		/obj/item/weapon/reagent_containers/food/snacks/monkeycube,
+		/obj/item/weapon/reagent_containers/food/snacks/monkeycube
+		)
 
+	storage_can_interact = list(
+		/obj/item/weapon/storage/box
 		)
 
 /obj/item/weapon/gripper/service //Used to handle food, drinks, and seeds.
@@ -98,6 +103,11 @@
 		/obj/item/weapon/reagent_containers/food,
 		/obj/item/seeds,
 		/obj/item/weapon/grown
+		)
+
+	storage_can_interact = list(
+		/obj/item/weapon/storage/fancy/egg_box,
+		/obj/item/weapon/storage/box
 		)
 
 /obj/item/weapon/gripper/gravekeeper	//Used for handling grave things, flowers, etc.
