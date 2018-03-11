@@ -40,6 +40,14 @@
 /obj/item/weapon/melee/baton/slime/robot
 	hitcost = 200
 
+/obj/item/weapon/melee/baton/slime/robot/New()
+	..()
+	var/mob/living/silicon/robot/R = loc
+	if (istype(R))
+		bcell = R.cell
+	update_icon()
+	return
+
 /obj/item/weapon/melee/baton/slime/robot/attack_self(mob/user)
 	//try to find our power cell
 	var/mob/living/silicon/robot/R = loc
