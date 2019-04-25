@@ -34,7 +34,7 @@
 				data -= taste
 
 /datum/reagent/nutriment/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(!injectable && alien != IS_SLIME)
+	if(!injectable && (alien != IS_SLIME && alien != IS_ZADDAT))
 		M.adjustToxLoss(0.1 * removed)
 		return
 	affect_ingest(M, alien, removed)

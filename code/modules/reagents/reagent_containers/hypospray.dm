@@ -246,6 +246,11 @@
 	desc = "A hypoinjector filled with glucose, used for critically malnourished patients and voidsuited workers."
 	filled_reagents = list("glucose" = 15)
 
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/nutriment
+	name = "nutriment hypo"
+	desc = "A hypoinjector filled with pure nutriment, for species that cannot consume food in normal ways. WARNING: toxic to most species."
+	filled_reagents = list("nutriment" = 15)
+
 /obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/stimm
 	name = "stimm injector"
 	desc = "A refined version of the standard autoinjector, allowing greater capacity. \
